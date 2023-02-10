@@ -1,0 +1,11 @@
+.profileModal{
+    label{
+        cursor: pointer;
+        input{
+            display: none;
+        }
+        .profileModal_label-text{
+            max-width: 122px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<div class="profile flex-column-center w-100">
+    <label for="change-avatar" class="profile_avatar">
+        {{> avatar classNames="lg change-avatar" url=user.avatar alt=user.firstname }}
+    </label>
+    {{> typography classNames="size-16 bold color-dark-100 mt-20" label=user.firstname }}
+    <div class="profile_attributes flex-column-center mt-60">
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Почта" }}
+            {{> editField type="email" id="email" name="email" val=user.email readonly="true" }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Логин" }}
+            {{> editField type="text" id="login" name="login" val=user.login readonly="true" }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Имя" }}
+            {{> editField type="text" id="firstname" name="firstname" val=user.firstname readonly="true" }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Фамилия" }}
+            {{> editField type="text" id="lastname" name="lastname" val=user.lastname readonly="true" }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Имя в чате" }}
+            {{> editField type="text" id="nickname" name="nickname" val=user.nickname readonly="true" }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Телефон" }}
+            {{> editField type="text" id="phone" name="phone" val=user.phone readonly="true" }}
+        </div>
+    </div>
+    <div class="profile_links mt-60">
+        <div class="profile_links-item">
+            {{> link classNames="typography size-13 regular" label="Изменить данные" url="/src/pages/profileEdit.hbs" }}
+        </div>
+        <div class="profile_links-item">
+            {{> link classNames="typography size-13 regular" label="Изменить пароль" url="/src/pages/profilePassword.hbs" }}
+        </div>
+        <div class="profile_links-item">
+            {{> link classNames="typography size-13 regular tertiary" label="Выйти" url="/src/pages/signin.hbs" }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+.dialog {
+  max-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  .dialog_header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--color-grey-100);
+    .dialog_header-actions {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: 0.2s all linear;
+      cursor: pointer;
+      svg {
+        circle {
+          transition: 0.2s all linear;
+        }
+      }
+      &:hover {
+        background: #f5f5f5;
+        svg {
+          circle {
+            fill: var(--color-blue);
+          }
+        }
+        & + .dialog_header-modal {
+          display: flex;
+        }
+      }
+    }
+    .dialog_header-modal {
+      display: none;
+      position: absolute;
+      top: 65px;
+      right: 10px;
+      background: var(--color-light-100);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+      border-radius: 12px;
+      padding: 15px;
+      margin: 0;
+      list-style-type: none;
+      .modal-item {
+        cursor: pointer;
+        margin-top: 15px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+        .icon {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          border: 1.5px solid var(--color-blue);
+        }
+      }
+    }
+  }
+  .dialog_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    padding: 30px 20px;
+  }
+  .dialog_writebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid var(--color-grey-100);
+    padding: 11px 20px;
+    position: relative;
+    .dialog_writebox-clip {
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+      svg {
+        path {
+          transition: 0.2s all linear;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: var(--color-blue);
+          }
+        }
+        & + .dialog_writebox-modal {
+          display: flex;
+        }
+      }
+    }
+    .dialog_writebox-modal {
+      display: none;
+      position: absolute;
+      bottom: 65px;
+      left: 10px;
+      background: var(--color-light-100);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+      border-radius: 12px;
+      padding: 15px;
+      margin: 0;
+      list-style-type: none;
+      .modal-item {
+        margin-top: 15px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+        label {
+          cursor: pointer;
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+    .dialog_writebox-field {
+      height: 32px;
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      width: 100%;
+      background: var(--color-light-200);
+      border-radius: 30px;
+      resize: none;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      color: var(--color-grey-200);
+    }
+    .dialog_writebox-send {
+    }
+  }
+}

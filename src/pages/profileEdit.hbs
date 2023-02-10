@@ -1,0 +1,25 @@
+---
+{
+    user: {
+        avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+        firstname: "Иван",
+        lastname: "Иванов",
+        nickname: "Иван",
+        email: "pochta@yandex.ru",
+        login: "ivanivanov",
+        phone: "+7 (909) 967 30 30"
+    }
+}
+---
+<html>
+  <head>
+    <link rel="stylesheet" href="../index.scss" />
+  </head>
+  <body>
+    <div class="profileWrapper w-100">    
+        {{> back }}
+        {{#> profileEdit user=user }}
+        {{/profileEdit}}
+    </div>
+  </body>
+</html>

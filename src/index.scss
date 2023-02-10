@@ -1,0 +1,30 @@
+@use "./styles/variables.scss" as variables;
+@use "./styles/_create-properties.scss" as creator;
+
+:root {
+  /* Colors */
+  @include creator.create-custom-properties("color", variables.$colors);
+}
+
+@import "./styles/_global.scss";
+@import "./components/ui/button.scss";
+@import "./components/ui/circleButton.scss";
+@import "./components/ui/field.scss";
+@import "./components/ui/typography.scss";
+@import "./components/ui/link.scss";
+@import "./components/ui/search.scss";
+@import "./components/ui/avatar.scss";
+@import "./components/ui/dialogsItem.scss";
+@import "./components/ui/message.scss";
+@import "./components/ui/overlay.scss";
+@import "./components/ui/back.scss";
+@import "./components/ui/editField.scss";
+
+@import "./components/views/dialogDetail.scss";
+@import "./components/views/dialogs.scss";
+@import "./components/views/signIn.scss";
+@import "./components/views/signUp.scss";
+@import "./components/views/modal.scss";
+@import "./components/views/profile.scss";
+@import "./components/views/profileModal.scss";
+@import "./components/views/badRequest.scss";

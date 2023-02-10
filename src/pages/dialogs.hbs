@@ -1,0 +1,30 @@
+---
+{
+    dialogsList: [
+        {
+            avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+            name: "Василий",
+            message: "Друзья, у меня для вас особенный выпуск новостей!...",
+            time: "15:12"
+        },
+        {
+            avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+            name: "Виталий",
+            message: "Друзья, у меня для вас особенный выпуск новостей!...",
+            time: "19:12"
+        },
+    ]
+}
+---
+<html>
+  <head>
+    <link rel="stylesheet" href="../index.scss" />
+  </head>
+  <body>
+    <div class="dialogsWrapper w-100">
+        {{#> dialogs list=dialogsList }}
+        {{/dialogs}}
+        {{> typography classNames="size-12 regular m-auto color-grey-200" label="Выберите чат чтобы отправить сообщение" }}
+    </div>
+  </body>
+</html>

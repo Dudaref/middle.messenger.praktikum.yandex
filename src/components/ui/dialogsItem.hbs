@@ -1,0 +1,10 @@
+<a href="/src/pages/dialogDetail.hbs" class="dialogs_list-item w-100">
+    {{> avatar classNames="md" url=dialog.avatar alt=dialog.name }}
+    <div class="item_content flex-column-start ml-10">
+        {{> typography classNames="size-13 bold color-dark-100" label=dialog.name }}
+        {{> typography classNames="size-12 regular multiline align-left rows-2 color-grey-200 mt-4" label=dialog.message }}
+    </div>
+    <div class="item_time ml-15">
+        {{> typography classNames="size-9 regular multiline color-grey-200" label=dialog.time }}
+    </div>
+</a>
