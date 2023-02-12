@@ -208,6 +208,20 @@ body {
   align-items: center;
 }
 
+.navigation {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-top: 16px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 .dialogsWrapper {
   display: flex;
   flex-direction: row;

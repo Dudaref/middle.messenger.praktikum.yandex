@@ -80,18 +80,24 @@
     }
 }
 ---
-<html>
+<html lang="ru">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диалоги. Мессенджер - Яндекс практикум</title>
     <link rel="stylesheet" href="../index.scss" />
   </head>
   <body>
-    <div class="dialogsWrapper w-100">
-        {{#> dialogs list=dialogsList }}
-        {{/dialogs}}
-        {{#> dialogDetail dialog=dialog myId=myId }}
-        {{/dialogDetail}}
-        {{#> modal modalLabel="Удалить пользователя" buttonLabel="Удалить" }}
-        {{/modal}}
-    </div>
+    <main>
+        <section class="dialogsWrapper w-100">
+            {{#> dialogs list=dialogsList }}
+            {{/dialogs}}
+            {{#> dialogDetail dialog=dialog myId=myId }}
+            {{/dialogDetail}}
+            {{#> modal modalLabel="Удалить пользователя" buttonLabel="Удалить" }}
+            {{/modal}}
+        </section>
+    </main>
   </body>
 </html>
