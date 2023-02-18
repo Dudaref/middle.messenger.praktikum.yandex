@@ -1,0 +1,16 @@
+<div class="dialogs">
+    <div class="dialogs_header">
+        <a href="/src/pages/profile.hbs" class="link secondary flex-center ml-auto">
+            {{> typography classNames="size-12 regular mr-8 color-grey-200" label="Профиль" }}
+            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9L5 5L1 1" stroke="#999999"/>
+            </svg>
+        </a>
+        {{> search classNames="mt-20" type="search" id="search" name="search" placeholder="Поиск" }}
+    </div>
+    <div class="dialogs_list flex-column-start w-100">
+        {{#each list}}
+            {{> dialogsItem dialog=. }}
+        {{/each}}
+    </div>
+</div>

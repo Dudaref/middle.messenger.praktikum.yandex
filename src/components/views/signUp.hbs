@@ -1,0 +1,12 @@
+<form class="signUp-modal m-auto">
+    {{> typography classNames="size-20 regular color-dark-100" label="Регистрация" }}
+    {{> field classNames="w-100 mt-40" label="Почта" type="email" id="email" name="email" }}
+    {{> field classNames="w-100 mt-16" label="Логин" type="text" id="login" name="login" }}
+    {{> field classNames="w-100 mt-16" label="Имя" type="text" id="first_name" name="first_name" }}
+    {{> field classNames="w-100 mt-16" label="Фамилия" type="text" id="second_name" name="second_name" }}
+    {{> field classNames="w-100 mt-16" label="Телефон" type="text" id="phone" name="phone" }}
+    {{> field classNames="w-100 mt-16" label="Пароль" type="password" id="password" name="password" }}
+    {{> field classNames="w-100 mt-16" label="Пароль (ещё раз)" type="password" id="password-repeat" name="password-repeat" }}
+    {{> button classNames="mt-60" label="Зарегистрироваться" }}
+    {{> link classNames="typography size-11 regular mt-14" label="Войти" url="/src/pages/signin.hbs" }}
+</div>

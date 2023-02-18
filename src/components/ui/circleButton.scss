@@ -1,0 +1,13 @@
+.btn-circle {
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+
+  &.left-arrow {
+    transform: rotate(180deg);
+  }
+}

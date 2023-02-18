@@ -1,0 +1,21 @@
+.dialogs_list-item {
+  padding: 12px 10px;
+  border-top: 1px solid var(--color-grey-100);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+  .item_content {
+    max-width: 193px;
+    width: 100%;
+  }
+  .item_time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}

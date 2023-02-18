@@ -1,0 +1,55 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мессенджер - Яндекс практикум</title>
+    <link rel="stylesheet" href="./index.scss" />
+</head>
+
+<body>
+    <main>
+        <nav class="navigation ml-20 mt-20">
+            <ul class="flex-column-start">
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Авторизация" url="./pages/signin.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Регистрация" url="./pages/signup.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Диалоги" url="./pages/dialogs.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Диалог" url="./pages/dialogDetail.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Диалог. Добавление пользователя" url="./pages/dialogAddUser.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Диалог. Удаление пользователя" url="./pages/dialogRemoveUser.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Профиль" url="./pages/profile.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Настройки профиля" url="./pages/profileEdit.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Изменить пароль" url="./pages/profilePassword.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="Профиль. Изменить аватар" url="./pages/profileModal.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="404" url="./pages/404.hbs" }}
+                </li>
+                <li>
+                    {{> link classNames="typography size-14 regular" label="500" url="./pages/500.hbs" }}
+                </li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>

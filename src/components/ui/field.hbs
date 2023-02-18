@@ -1,0 +1,10 @@
+<div class="field {{classNames}}">
+  <input
+    class="field-input"
+    type={{type}}
+    id={{id}}
+    name={{name}}
+    onchange="this.value.length > 0 ? this.classList.add('isActive') : this.classList.remove('isActive')"
+  />
+  <label for={{id}}>{{label}}</label>
+</div>

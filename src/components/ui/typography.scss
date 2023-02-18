@@ -1,0 +1,87 @@
+@use "../../styles/create-properties" as creator;
+
+.typography {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1em;
+
+  &.size {
+    @include creator.variants-from-array(
+        (
+          9: 9px,
+          10: 10px,
+          11: 11px,
+          12: 12px,
+          13: 13px,
+          14: 14px,
+          16: 16px,
+          18: 18px,
+          20: 20px,
+          24: 24px,
+          26: 26px,
+          36: 36px,
+          40: 40px,
+          46: 28px,
+          50: 28px,
+        )
+      )
+      using ($key, $value) {
+      font-size: #{$value};
+    }
+  }
+
+  &.light {
+    font-weight: 300;
+  }
+  &.normal {
+    font-weight: 400;
+  }
+  &.regular {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.bolder {
+    font-weight: 900;
+  }
+
+  &.align-center {
+    text-align: center;
+  }
+  &.align-left {
+    text-align: left;
+  }
+  &.align-right {
+    text-align: right;
+  }
+
+  &.multiline {
+    line-height: 1.4em;
+  }
+
+  &.rows {
+    @include creator.variants-from-array(
+        (
+          1: 1,
+          2: 2,
+          3: 3,
+        )
+      )
+      using ($key, $row) {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: #{$row};
+      overflow: hidden;
+      height: #{1em * $row};
+      &.multiline {
+        height: #{1.4em * $row};
+      }
+    }
+  }
+
+  &.select-none {
+    user-select: none;
+  }
+}

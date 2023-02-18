@@ -1,0 +1,237 @@
+@use "./_create-properties.scss" as creator;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;900&display=swap");
+
+*,
+html {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  &-dark-100 {
+    color: var(--color-dark-100);
+  }
+  &-grey-100 {
+    color: var(--color-grey-100);
+  }
+  &-grey-200 {
+    color: var(--color-grey-200);
+  }
+  &-grey-300 {
+    color: var(--color-grey-200);
+  }
+  &-light-100 {
+    color: var(--color-light-100);
+  }
+  &-light-200 {
+    color: var(--color-light-100);
+  }
+  &-light-300 {
+    color: var(--color-light-100);
+  }
+  &-light-400 {
+    color: var(--color-light-100);
+  }
+  &-light-500 {
+    color: var(--color-light-100);
+  }
+  &-blue {
+    color: var(--color-blue);
+  }
+  &-red {
+    color: var(--color-red);
+  }
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt {
+  @include creator.variants-from-array(
+      (
+        4: 4px,
+        5: 5px,
+        6: 6px,
+        8: 8px,
+        10: 10px,
+        14: 14px,
+        15: 15px,
+        16: 16px,
+        18: 18px,
+        20: 20px,
+        24: 24px,
+        25: 25px,
+        27: 27px,
+        30: 30px,
+        35: 35px,
+        40: 40px,
+        45: 45px,
+        46: 46px,
+        50: 50px,
+        60: 60px,
+        100: 100px,
+        160: 160px,
+      )
+    )
+    using ($key, $value) {
+    margin-top: #{$value};
+  }
+}
+
+.mb {
+  @include creator.variants-from-array(
+      (
+        4: 4px,
+        5: 5px,
+        6: 6px,
+        8: 8px,
+        10: 10px,
+        15: 15px,
+        16: 16px,
+        18: 18px,
+        20: 20px,
+        24: 24px,
+        25: 25px,
+        27: 27px,
+        30: 30px,
+        35: 35px,
+        40: 40px,
+        45: 45px,
+        46: 46px,
+        60: 60px,
+      )
+    )
+    using ($key, $value) {
+    margin-bottom: #{$value};
+  }
+}
+
+.mr {
+  @include creator.variants-from-array(
+      (
+        4: 4px,
+        5: 5px,
+        6: 6px,
+        8: 8px,
+        10: 10px,
+        15: 15px,
+        16: 16px,
+        18: 18px,
+        20: 20px,
+        24: 24px,
+        25: 25px,
+        27: 27px,
+        30: 30px,
+        35: 35px,
+        40: 40px,
+        45: 45px,
+        46: 46px,
+        60: 60px,
+      )
+    )
+    using ($key, $value) {
+    margin-right: #{$value};
+  }
+}
+
+.ml {
+  @include creator.variants-from-array(
+      (
+        4: 4px,
+        5: 5px,
+        6: 6px,
+        8: 8px,
+        10: 10px,
+        15: 15px,
+        16: 16px,
+        18: 18px,
+        20: 20px,
+        24: 24px,
+        25: 25px,
+        27: 27px,
+        30: 30px,
+        35: 35px,
+        40: 40px,
+        45: 45px,
+        46: 46px,
+        60: 60px,
+      )
+    )
+    using ($key, $value) {
+    margin-left: #{$value};
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-top: 16px;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.dialogsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profileWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

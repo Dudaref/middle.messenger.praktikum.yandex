@@ -1,0 +1,103 @@
+---
+{
+    dialogsList: [
+        {
+            avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+            name: "Василий",
+            message: "Друзья, у меня для вас особенный выпуск новостей!...",
+            time: "15:12"
+        },
+        {
+            avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+            name: "Виталий",
+            message: "Друзья, у меня для вас особенный выпуск новостей!...",
+            time: "19:12"
+        },
+    ],
+    dialog: {
+        user: {
+            id: 2,
+            avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+            name: "Василий",
+        },
+        messages: [
+            {
+                id: 0,
+                content: {
+                    type: "text",
+                    text: "Друзья, у меня для вас особенный выпуск новостей! Друзья, у меня для вас особенный выпуск новостей! Друзья, у меня для вас особенный выпуск новостей! Друзья, у меня для вас особенный выпуск новостей! Друзья, у меня для вас особенный выпуск новостей! ",
+                },
+                time: "20:20",
+                sender: {
+                    id: 2,
+                    avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+                    name: "Василий",
+                }
+            },
+            {
+                id: 1,
+                content: {
+                    type: "text",
+                    text: "Друзья, у меня для вас особенный выпуск новостей! Друзья, у меня для вас особенный выпуск новостей! ",
+                },
+                time: "20:21",
+                read: true,
+                sender: {
+                    id: 2,
+                    avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+                    name: "Василий",
+                }
+            },
+            {
+                id: 2,
+                content: {
+                    type: "text",
+                    text: "Друзья, у меня для вас особенный выпуск новостей! ",
+                    media: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+                },
+                time: "20:22",
+                read: false,
+                sender: {
+                    id: 1,
+                    avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+                    name: "Виталий",
+                }
+            },
+            {
+                id: 2,
+                content: {
+                    type: "text",
+                    media: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+                },
+                time: "20:22",
+                sender: {
+                    id: 1,
+                    avatar: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
+                    name: "Виталий",
+                }
+            },
+        ]
+    }
+}
+---
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диалоги. Мессенджер - Яндекс практикум</title>
+    <link rel="stylesheet" href="../index.scss" />
+  </head>
+  <body>
+    <main>
+        <section class="dialogsWrapper w-100">
+            {{#> dialogs list=dialogsList }}
+            {{/dialogs}}
+            {{#> dialogDetail dialog=dialog myId=myId }}
+            {{/dialogDetail}}
+            {{#> modal modalLabel="Удалить пользователя" buttonLabel="Удалить" }}
+            {{/modal}}
+        </section>
+    </main>
+  </body>
+</html>

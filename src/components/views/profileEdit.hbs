@@ -1,0 +1,32 @@
+<form class="profile flex-column-center w-100">
+    <label for="change-avatar" class="profile_avatar">
+        {{> avatar classNames="lg change-avatar" url=user.avatar alt=user.firstname }}
+    </label>
+    <div class="profile_attributes flex-column-center mt-100">
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Почта" }}
+            {{> editField type="email" id="email" name="email" val=user.email }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Логин" }}
+            {{> editField type="text" id="login" name="login" val=user.login }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Имя" }}
+            {{> editField type="text" id="first_name" name="first_name" val=user.firstname }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Фамилия" }}
+            {{> editField type="text" id="second_name" name="second_name" val=user.lastname }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Имя в чате" }}
+            {{> editField type="text" id="display_name" name="display_name" val=user.nickname }}
+        </div>
+        <div class="profile_attributes-item">
+            {{> typography classNames="size-13 regular color-dark-100" label="Телефон" }}
+            {{> editField type="text" id="phone" name="phone" val=user.phone }}
+        </div>
+    </div>
+    {{> button classNames="mt-60" label="Сохранить" }}
+</form>
